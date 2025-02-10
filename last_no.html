@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(246, 205, 211);
+        }
+
+        #invisible-btn:hover {
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+      </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="mb-4">
+            <img src="images/smirk.gif" class="mx-auto d-block" style="width:50%">
+        </div>
+
+        <h3 class="text-center mb-4">Try saying no now;)</h3>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-auto">
+                <a href="yes.html" class="btn btn-primary">YES!!!</a>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="btn btn-danger" id="invisible-btn">No...</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const invisibleBtn = document.getElementById('invisible-btn');
+    
+        invisibleBtn.addEventListener('mouseover', () => {
+            const randomX = Math.random() * 200 - 100;
+            const randomY = Math.random() * 200 - 100;
+            invisibleBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        });
+    
+        invisibleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>
